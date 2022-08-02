@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class IAMegaInteligente : MonoBehaviour
 {
+    //Uma aplicação que consegue ir aleatoriamente para dois destinos, e fazer o caminho de ida e volta.
+    //Adicionado uma flag (tesouro). Ele para quando encontra.
+
     public GameObject Destino;
     public NavMeshAgent Agente;
     public GameObject Destino1;

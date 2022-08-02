@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class IABurra : MonoBehaviour
 {
+
+    //Uma aplicação simples que vai em direção ao destino ignorando a fisica do objeto.
+
     public GameObject Destino;
 
     void Update()

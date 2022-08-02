@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class IAInteligente : MonoBehaviour
 {
+    //uma aplicação que consegue entender qual destino é mais proximo, e ir em direção a ele.
+
     public GameObject Destino;
     public NavMeshAgent Agente;
     public GameObject Destino1;

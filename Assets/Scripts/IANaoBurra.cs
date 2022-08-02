@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class IANaoBurra : MonoBehaviour
 {
+    //Uma aplicação que mapeia o terreno, e segue o melhor caminho
+
     public GameObject Destino;
     public NavMeshAgent Agente;
    
