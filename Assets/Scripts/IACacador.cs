@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -30,28 +29,32 @@ public class IACacador : MonoBehaviour
         {
             Vector3 meuDestino = Destino.transform.position;
             Agente.SetDestination(meuDestino);
-            //Tesouro
-            if (objetivo == true)
-            {
-                //bjetivo = true;
-                Agente.speed = 0;
-            }
-            else if (Vector3.Distance(transform.position, meuDestino) < 8)
+            //Se a minha distancia para qualquer wayPoint menor que 8 
+           if (Vector3.Distance(transform.position, meuDestino) < 8)
             {
                 int n = Destinos.Count;
                 numero = Random.Range(0, n);
                 Destino = Destinos[numero];
             }
         }
+        else
+        {
+            Destino = Tesouro;
+            Vector3 meuDestino = Destino.transform.position;
+            Agente.SetDestination(meuDestino);
+
+        }
     }
 
 
     void OnTriggerEnter(Collider achou)
     {
-        Debug.Log(achou.gameObject.name);
-        if(achou.gameObject.tag == "Tesouro")
+        
+        //Cruzei com meu Objetivo
+        if (achou.gameObject.tag == "Tesouro")
         {
             objetivo = true;
+            Tesouro = achou.gameObject;
         }
     }
 
